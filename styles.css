@@ -1,0 +1,1016 @@
+/* ==========================================================================
+   Hjelperne – felles stilark
+   Farger: Mørkegrønn #00361F  |  Hvit #FFFFFF
+   Designet for god lesbarhet: store skrifter, høy kontrast, store knapper.
+   ========================================================================== */
+
+:root {
+  --gronn: #00361f;
+  --gronn-mork: #002616;
+  --gronn-lys: #e9f1ec;
+  --hvit: #ffffff;
+  --tekst: #1a1a1a;
+  --tekst-dempet: #4a4a4a;
+  --kant: #d6e0da;
+
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --radius: 14px;
+  --skygge: 0 6px 24px rgba(0, 54, 31, 0.12);
+  --maks-bredde: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 112.5%; /* 18px grunnstørrelse – lettere å lese */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--tekst);
+  background: var(--hvit);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--gronn);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 4px solid #f5b400;
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--gronn);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.innhold {
+  width: min(100% - 2.5rem, var(--maks-bredde));
+  margin-inline: auto;
+}
+
+.seksjon {
+  padding: 4.5rem 0;
+}
+
+.seksjon--lys {
+  background: var(--gronn-lys);
+}
+
+.seksjon--gronn {
+  background: var(--gronn);
+  color: var(--hvit);
+}
+
+.seksjon--gronn h2,
+.seksjon--gronn h3,
+.seksjon--gronn a:not(.knapp) {
+  color: var(--hvit);
+}
+
+.seksjon-topp {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+}
+
+.seksjon-topp p {
+  font-size: 1.15rem;
+  color: var(--tekst-dempet);
+}
+
+.seksjon--gronn .seksjon-topp p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --------------------------------------------------------------------------
+   Hopp til innhold (tilgjengelighet)
+   -------------------------------------------------------------------------- */
+.hopp-til-innhold {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--gronn);
+  color: var(--hvit);
+  padding: 0.75rem 1.25rem;
+  z-index: 1000;
+  font-weight: 700;
+}
+
+.hopp-til-innhold:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Knapper
+   -------------------------------------------------------------------------- */
+.knapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.4rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.knapp:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--skygge);
+}
+
+.knapp--primar {
+  background: var(--gronn);
+  color: var(--hvit);
+  border-color: var(--gronn);
+}
+
+.knapp--primar:hover {
+  background: var(--gronn-mork);
+  border-color: var(--gronn-mork);
+}
+
+.knapp--sekundar {
+  background: var(--hvit);
+  color: var(--gronn);
+  border-color: var(--gronn);
+}
+
+.knapp--sekundar:hover {
+  background: var(--gronn-lys);
+}
+
+.knapp--hvit {
+  background: var(--hvit);
+  color: var(--gronn);
+  border-color: var(--hvit);
+}
+
+.knapp--hvit:hover {
+  background: var(--gronn-lys);
+}
+
+.knapp--omriss-hvit {
+  background: transparent;
+  color: var(--hvit);
+  border-color: var(--hvit);
+}
+
+.knapp--omriss-hvit:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.knapp--stor {
+  font-size: 1.25rem;
+  padding: 1rem 2.25rem;
+}
+
+.knapp svg {
+  width: 1.3em;
+  height: 1.3em;
+  flex: none;
+}
+
+/* --------------------------------------------------------------------------
+   Topplinje med telefonnummer
+   -------------------------------------------------------------------------- */
+.topplinje {
+  background: var(--gronn);
+  color: var(--hvit);
+  font-size: 1rem;
+  padding: 0.45rem 0;
+}
+
+.topplinje .innhold {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.topplinje a {
+  color: var(--hvit);
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topplinje a:hover {
+  text-decoration: underline;
+}
+
+.topplinje svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.topplinje-telefon {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.topplinje .telefontid {
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .topplinje .innhold {
+    justify-content: center;
+  }
+
+  .topplinje .innhold > span {
+    display: none;
+  }
+
+  .topplinje-telefon {
+    flex-direction: column;
+    gap: 0.1rem;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Header / navigasjon
+   -------------------------------------------------------------------------- */
+.hode {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--hvit);
+  border-bottom: 2px solid var(--kant);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hode .innhold {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 5.25rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: var(--gronn);
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: 0.02em;
+}
+
+.logo img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.meny {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.meny a {
+  display: block;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--gronn);
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.meny a:hover {
+  background: var(--gronn-lys);
+}
+
+.meny a[aria-current="page"] {
+  background: var(--gronn-lys);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
+.meny .knapp {
+  margin-left: 0.5rem;
+  min-height: 2.9rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1.02rem;
+  color: var(--hvit);
+  background: var(--gronn);
+}
+
+.meny .knapp:hover {
+  transform: none;
+  background: var(--gronn-mork);
+}
+
+.hode-telefon {
+  display: none;
+}
+
+.meny-knapp {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--hvit);
+  border: 3px solid var(--gronn);
+  color: var(--gronn);
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.meny-knapp svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .meny-knapp {
+    display: inline-flex;
+  }
+
+  .meny {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    background: var(--hvit);
+    border-bottom: 2px solid var(--kant);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    padding: 0.75rem 1.25rem 1.25rem;
+  }
+
+  .meny.er-apen {
+    display: flex;
+  }
+
+  .meny a {
+    font-size: 1.2rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .meny .knapp {
+    margin: 0.5rem 0 0;
+  }
+
+  .logo span {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(180deg, var(--hvit) 0%, var(--gronn-lys) 100%);
+  padding: 4rem 0 4.5rem;
+}
+
+.hero .innhold {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-tekst p.ingress {
+  font-size: 1.3rem;
+  color: var(--tekst-dempet);
+  max-width: 36rem;
+}
+
+.hero-handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.hero-telefon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0;
+  font-size: 1.15rem;
+  color: var(--tekst-dempet);
+}
+
+.hero-telefon a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gronn);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero-telefon a:hover {
+  text-decoration: underline;
+}
+
+.hero-telefontid {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  color: var(--tekst-dempet);
+}
+
+.hero-bilde {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-bilde img {
+  width: min(100%, 420px);
+  border-radius: 50%;
+  box-shadow: var(--skygge);
+  background: var(--hvit);
+}
+
+.stikkord {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.stikkord li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--hvit);
+  border: 2px solid var(--kant);
+  color: var(--gronn);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.stikkord svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+@media (max-width: 900px) {
+  .hero .innhold {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-tekst p.ingress {
+    margin-inline: auto;
+  }
+
+  .hero-handlinger,
+  .stikkord {
+    justify-content: center;
+  }
+
+  .hero-bilde {
+    order: -1;
+  }
+
+  .hero-bilde img {
+    width: min(70%, 300px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-handlinger .knapp {
+    width: 100%;
+  }
+
+  .hero-telefon {
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  .hero-telefontid {
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Telefon-banner (stor, tydelig)
+   -------------------------------------------------------------------------- */
+.ring-banner {
+  background: var(--gronn);
+  color: var(--hvit);
+  padding: 2rem 0;
+}
+
+.ring-banner .innhold {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 2.5rem;
+  text-align: center;
+}
+
+.ring-banner p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.ring-banner a.telefon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--hvit);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.ring-banner a.telefon:hover {
+  text-decoration: underline;
+}
+
+.ring-banner svg {
+  width: 1em;
+  height: 1em;
+}
+
+.ring-banner .ring-banner-tid {
+  flex-basis: 100%;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.ring-banner .ring-banner-tid strong {
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Tjenester
+   -------------------------------------------------------------------------- */
+.kort-rutenett {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.kort {
+  background: var(--hvit);
+  border: 2px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.kort:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--skygge);
+  border-color: var(--gronn);
+}
+
+.kort-ikon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: var(--gronn);
+  color: var(--hvit);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.kort-ikon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.kort p {
+  color: var(--tekst-dempet);
+  margin: 0;
+}
+
+.kort .merknad {
+  margin-top: 1rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 4px solid var(--gronn);
+  background: var(--gronn-lys);
+  border-radius: 0 8px 8px 0;
+  color: var(--tekst);
+  font-size: 0.98rem;
+}
+
+.kort--fremhevet {
+  background: var(--gronn);
+  border-color: var(--gronn);
+  color: var(--hvit);
+}
+
+.kort--fremhevet h3,
+.kort--fremhevet p {
+  color: var(--hvit);
+}
+
+.kort--fremhevet .kort-ikon {
+  background: var(--hvit);
+  color: var(--gronn);
+}
+
+.kort--fremhevet .knapp {
+  margin-top: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Slik fungerer det
+   -------------------------------------------------------------------------- */
+.steg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  counter-reset: steg;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.steg li {
+  position: relative;
+  background: var(--hvit);
+  border-radius: var(--radius);
+  padding: 2.25rem 1.75rem 2rem;
+  border: 2px solid var(--kant);
+  text-align: center;
+}
+
+.steg-nummer {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  background: var(--gronn);
+  color: var(--hvit);
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem;
+}
+
+.steg p {
+  color: var(--tekst-dempet);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Hvorfor velge oss
+   -------------------------------------------------------------------------- */
+.fordeler {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fordeler li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.fordeler svg {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.35rem;
+  border-radius: 50%;
+  background: var(--hvit);
+  color: var(--gronn);
+}
+
+.fordeler strong {
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.fordeler p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --------------------------------------------------------------------------
+   Tilbakemeldinger
+   -------------------------------------------------------------------------- */
+.sitater {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.sitat {
+  background: var(--hvit);
+  border-radius: var(--radius);
+  border: 2px solid var(--kant);
+  padding: 2rem 1.75rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sitat .stjerner {
+  color: #f5b400;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+}
+
+.sitat p {
+  font-size: 1.1rem;
+  margin: 0;
+  flex: 1;
+}
+
+.sitat footer {
+  font-weight: 700;
+  color: var(--gronn);
+}
+
+.sitat footer span {
+  display: block;
+  font-weight: 400;
+  color: var(--tekst-dempet);
+  font-size: 0.95rem;
+}
+
+.senter {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Avslutning / kontakt-CTA
+   -------------------------------------------------------------------------- */
+.cta .innhold {
+  text-align: center;
+  max-width: 50rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+}
+
+.cta-handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cta .cta-tid {
+  margin: 1.5rem 0 0;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --------------------------------------------------------------------------
+   Bunntekst
+   -------------------------------------------------------------------------- */
+.bunn {
+  background: var(--gronn-mork);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 3.5rem 0 2rem;
+  font-size: 1rem;
+}
+
+.bunn-rutenett {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.bunn h3 {
+  color: var(--hvit);
+  font-size: 1.15rem;
+  margin-bottom: 0.9rem;
+}
+
+.bunn a {
+  color: var(--hvit);
+  text-decoration: none;
+}
+
+.bunn a:hover {
+  text-decoration: underline;
+}
+
+.bunn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.bunn .logo {
+  color: var(--hvit);
+  margin-bottom: 1rem;
+}
+
+.bunn .logo img {
+  width: 56px;
+  height: 56px;
+}
+
+.bunn .telefon-stor {
+  font-size: 1.4rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.bunn .bunn-tid {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+
+.bunn .bunn-epost {
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.cta .cta-tid a {
+  color: var(--hvit);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bunn-linje {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+  .bunn-rutenett {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Fast ring-knapp på mobil
+   -------------------------------------------------------------------------- */
+.ring-fast {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .ring-fast {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 200;
+    display: inline-flex;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  body {
+    padding-bottom: 5.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Møt hjelperne (lenke til ansatte-siden)
+   -------------------------------------------------------------------------- */
+.ansatte-boks {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  background: var(--hvit);
+  border: 2px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 2rem 2.25rem;
+}
+
+.ansatte-ikon {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--gronn);
+  color: var(--hvit);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.ansatte-ikon svg {
+  width: 44px;
+  height: 44px;
+}
+
+.ansatte-boks h2 {
+  margin-bottom: 0.3rem;
+}
+
+.ansatte-boks p {
+  margin: 0;
+  color: var(--tekst-dempet);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {
+  .ansatte-boks {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+}

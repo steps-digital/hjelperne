@@ -1,0 +1,13 @@
+# Operativsystem-filer
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.cursor/
+
+# Arkiver og sikkerhetskopier
+*.rar
+*.zip
+*.7z
