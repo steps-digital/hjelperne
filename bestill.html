@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestill hjelp – Hjelperne</title>
+  <meta name="description" content="Bestill hjelp fra Hjelperne. Fyll ut skjemaet, send en e-post eller en SMS – eller ring oss på +47 483 82 120.">
+  <meta name="theme-color" content="#00361F">
+  <link rel="icon" href="bilder/logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="hopp-til-innhold" href="#hovedinnhold">Hopp til innhold</a>
+
+  <!-- Topplinje med telefonnummer -->
+  <div class="topplinje">
+    <div class="innhold">
+      <span>Hjelp når du trenger det – i hele nærområdet</span>
+      <div class="topplinje-telefon">
+        <a href="tel:+4748382120" aria-label="Ring Hjelperne på +47 483 82 120">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+          Ring oss: +47 483 82 120
+        </a>
+        <span class="telefontid">Hverdager 16:00–20:00 · Helger 10:00–16:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header med logo og meny -->
+  <header class="hode">
+    <div class="innhold">
+      <a class="logo" href="index.html" aria-label="Hjelperne – til forsiden">
+        <img src="bilder/logo.jpg" alt="Hjelperne-logo">
+        <span>Hjelperne</span>
+      </a>
+
+      <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="hovedmeny">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        Meny
+      </button>
+
+      <nav aria-label="Hovedmeny">
+        <ul class="meny" id="hovedmeny">
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="index.html#tjenester">Tjenester</a></li>
+          <li><a href="priser.html">Priser</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+          <li><a href="om-oss.html#ansatte">Ansatte</a></li>
+          <li><a href="tilbakemeldinger.html">Tilbakemeldinger</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a class="knapp knapp--primar" href="bestill.html" aria-current="page">Bestill hjelp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="hovedinnhold">
+
+    <section class="side-topp" aria-labelledby="side-tittel">
+      <div class="innhold">
+        <h1 id="side-tittel">Bestill hjelp</h1>
+        <p class="ingress">Velg den måten som passer deg best. Vi tar kontakt for å avtale tid og pris.</p>
+      </div>
+    </section>
+
+    <!-- Fire måter å bestille på -->
+    <section class="seksjon" aria-labelledby="valg-tittel">
+      <div class="innhold">
+        <div class="seksjon-topp">
+          <h2 id="valg-tittel">Slik kan du bestille</h2>
+        </div>
+
+        <div class="kontaktvalg">
+          <a class="valg" href="#skjema">
+            <span class="kort-ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4H9z"/><path d="M16 5h2a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="M8 12h8M8 16h5"/></svg>
+            </span>
+            <span class="valg-tittel">Fyll ut skjema</span>
+            <span class="valg-tekst">Skriv inn hva du trenger her på nettsiden.</span>
+            <span class="valg-handling">Gå til skjemaet</span>
+          </a>
+
+          <a class="valg" href="tel:+4748382120">
+            <span class="kort-ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            </span>
+            <span class="valg-tittel">Ring oss</span>
+            <span class="valg-tekst">Hverdager 16–20, helger 10–16.</span>
+            <span class="valg-handling">483 82 120</span>
+          </a>
+
+          <a class="valg" href="sms:+4748382120?&amp;body=Hei%20Hjelperne!%20Jeg%20trenger%20hjelp%20med%3A%20">
+            <span class="kort-ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <span class="valg-tittel">Send SMS</span>
+            <span class="valg-tekst">Skriv hva du trenger, så svarer vi deg.</span>
+            <span class="valg-handling">Send SMS til 483 82 120</span>
+          </a>
+
+          <a class="valg" href="mailto:hjelperneb@gmail.com?subject=Bestilling%20av%20hjelp&amp;body=Hei%20Hjelperne!%0A%0ANavn%3A%20%0ATelefon%3A%20%0AAdresse%3A%20%0AHva%20trenger%20jeg%20hjelp%20til%3A%20%0ANår%20passer%20det%3A%20%0A">
+            <span class="kort-ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </span>
+            <span class="valg-tittel">Send e-post</span>
+            <span class="valg-tekst">Vi svarer så fort vi kan.</span>
+            <span class="valg-handling">hjelperneb@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestillingsskjema – sendes til hjelperneb@gmail.com via FormSubmit -->
+    <section class="seksjon seksjon--lys" id="skjema" aria-labelledby="skjema-tittel">
+      <div class="innhold skjema-oppsett">
+        <form class="skjema" action="https://formsubmit.co/hjelperneb@gmail.com" method="POST">
+          <h2 id="skjema-tittel">Bestillingsskjema</h2>
+          <p class="skjema-hjelp">Felt merket med * må fylles ut.</p>
+
+          <input type="hidden" name="_subject" value="Ny bestilling fra nettsiden">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="">
+          <input class="honning" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="felt-par">
+            <div class="felt">
+              <label for="navn">Navn *</label>
+              <input id="navn" name="Navn" type="text" autocomplete="name" required>
+            </div>
+            <div class="felt">
+              <label for="telefon">Telefon *</label>
+              <input id="telefon" name="Telefon" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="felt">
+            <label for="epost">E-post <span class="valgfritt">(valgfritt)</span></label>
+            <input id="epost" name="email" type="email" autocomplete="email">
+          </div>
+
+          <div class="felt">
+            <label for="adresse">Adresse der du trenger hjelp *</label>
+            <input id="adresse" name="Adresse" type="text" autocomplete="street-address" required>
+          </div>
+
+          <div class="felt-par">
+            <div class="felt">
+              <label for="tjeneste">Hva trenger du hjelp til? *</label>
+              <select id="tjeneste" name="Tjeneste" required>
+                <option value="">Velg …</option>
+                <option>Snømåking og strøing</option>
+                <option>Mathandling</option>
+                <option>Bærehjelp</option>
+                <option>Flyttehjelp</option>
+                <option>Hage og utearbeid</option>
+                <option>Noe annet</option>
+              </select>
+            </div>
+            <div class="felt">
+              <label for="tid">Når passer det? <span class="valgfritt">(valgfritt)</span></label>
+              <input id="tid" name="Ønsket tid" type="text" placeholder="F.eks. lørdag formiddag">
+            </div>
+          </div>
+
+          <div class="felt">
+            <label for="beskrivelse">Beskriv kort hva du trenger hjelp med *</label>
+            <textarea id="beskrivelse" name="Beskrivelse" required></textarea>
+          </div>
+
+          <fieldset>
+            <legend>Hvordan vil du at vi tar kontakt?</legend>
+            <div class="radio-valg">
+              <label><input type="radio" name="Kontaktmåte" value="Ring meg" checked> Ring meg</label>
+              <label><input type="radio" name="Kontaktmåte" value="Send SMS"> Send SMS</label>
+              <label><input type="radio" name="Kontaktmåte" value="Send e-post"> Send e-post</label>
+            </div>
+          </fieldset>
+
+          <button class="knapp knapp--primar knapp--stor" type="submit">Send bestilling</button>
+          <p class="skjema-hjelp">Bestillingen sendes til hjelperneb@gmail.com.</p>
+        </form>
+
+        <aside class="side-info" aria-labelledby="info-tittel">
+          <h2 id="info-tittel">Godt å vite</h2>
+          <ul>
+            <li>
+              <strong>Pris avtales på forhånd</strong>
+              <span>Du vet alltid hva det koster før vi starter. Se <a href="priser.html">priser</a>.</span>
+            </li>
+            <li>
+              <strong>Betaling med Vipps eller faktura</strong>
+              <span>Vi tar dessverre ikke imot kort.</span>
+            </li>
+            <li>
+              <strong>Flyttehjelp uten bil</strong>
+              <span>Vi bærer over korte avstander, men har ikke bil til lange strekninger.</span>
+            </li>
+          </ul>
+          <h3>Heller ringe?</h3>
+          <p><a class="telefon-stor" href="tel:+4748382120">+47 483 82 120</a><br>Hverdager 16:00–20:00<br>Helger 10:00–16:00</p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bunntekst -->
+  <footer class="bunn" id="kontakt">
+    <div class="innhold">
+      <div class="bunn-rutenett">
+        <div>
+          <a class="logo" href="index.html">
+            <img src="bilder/logo.jpg" alt="">
+            <span>Hjelperne</span>
+          </a>
+          <p>Hjelp når du trenger det. En ungdomsbedrift som gir praktisk hjelp i hjemmet til folk i nærmiljøet.</p>
+          <p>Betaling med Vipps eller faktura.</p>
+        </div>
+
+        <div>
+          <h3>Kontakt oss</h3>
+          <ul>
+            <li><a class="telefon-stor" href="tel:+4748382120">+47 483 82 120</a></li>
+            <li class="bunn-tid">Telefontid: hverdager 16:00–20:00<br>helger 10:00–16:00</li>
+            <li><a class="bunn-epost" href="mailto:hjelperneb@gmail.com">hjelperneb@gmail.com</a></li>
+            <li><a href="sms:+4748382120">Send oss en SMS</a></li>
+            <li><a href="bestill.html">Bestill hjelp på nett</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Sider</h3>
+          <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="index.html#tjenester">Tjenester</a></li>
+            <li><a href="priser.html">Priser</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="om-oss.html#ansatte">Ansatte</a></li>
+            <li><a href="tilbakemeldinger.html">Tilbakemeldinger</a></li>
+            <li><a href="bestill.html">Bestill hjelp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bunn-linje">
+        &copy; <span id="aar">2026</span> Hjelperne. Alle rettigheter forbeholdt.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fast ring-knapp som alltid er synlig på mobil -->
+  <a class="knapp knapp--primar ring-fast" href="tel:+4748382120">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+    Ring 483 82 120
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

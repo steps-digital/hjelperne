@@ -43,12 +43,12 @@
       <nav aria-label="Hovedmeny">
         <ul class="meny" id="hovedmeny">
           <li><a href="index.html" aria-current="page">Hjem</a></li>
-          <li><a href="tjenester.html">Tjenester</a></li>
+          <li><a href="#tjenester">Tjenester</a></li>
           <li><a href="priser.html">Priser</a></li>
           <li><a href="om-oss.html">Om oss</a></li>
-          <li><a href="ansatte.html">Ansatte</a></li>
+          <li><a href="om-oss.html#ansatte">Ansatte</a></li>
           <li><a href="tilbakemeldinger.html">Tilbakemeldinger</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
           <li><a class="knapp knapp--primar" href="bestill.html">Bestill hjelp</a></li>
         </ul>
       </nav>
@@ -69,7 +69,7 @@
 
           <div class="hero-handlinger">
             <a class="knapp knapp--primar knapp--stor" href="bestill.html">Bestill hjelp</a>
-            <a class="knapp knapp--sekundar knapp--stor" href="tjenester.html">Se hva vi hjelper med</a>
+            <a class="knapp knapp--sekundar knapp--stor" href="#tjenester">Se hva vi hjelper med</a>
           </div>
 
           <p class="hero-telefon">
@@ -159,7 +159,7 @@
             </div>
             <h3>Noe annet? Bare spør!</h3>
             <p>Hjelp med mobilen, henting på apoteket, rydding i boden, lufting av hunden – vi kan avtale nesten hva som helst.</p>
-            <a class="knapp knapp--hvit" href="kontakt.html">Ta kontakt</a>
+            <a class="knapp knapp--hvit" href="#kontakt">Ta kontakt</a>
           </article>
         </div>
       </div>
@@ -177,7 +177,7 @@
           <li>
             <div class="steg-nummer" aria-hidden="true">1</div>
             <h3>Ta kontakt</h3>
-            <p>Ring oss på <a href="tel:+4748382120"><strong>483 82 120</strong></a> (hverdager 16–20, helger 10–16), send en e-post til <a href="mailto:hjelperneb@gmail.com">hjelperneb@gmail.com</a>, eller fyll ut bestillingsskjemaet. Fortell kort hva du trenger hjelp til.</p>
+            <p>Ring oss på <a href="tel:+4748382120"><strong>483 82 120</strong></a> (hverdager 16–20, helger 10–16), send en e-post til <a href="mailto:hjelperneb@gmail.com">hjelperneb@gmail.com</a>, eller fyll ut <a href="bestill.html">bestillingsskjemaet</a>. Fortell kort hva du trenger hjelp til.</p>
           </li>
           <li>
             <div class="steg-nummer" aria-hidden="true">2</div>
@@ -234,7 +234,7 @@
       </div>
     </section>
 
-    <!-- Møt hjelperne – lenke til ansatte-siden (bilder og navn legges inn på ansatte.html senere) -->
+    <!-- Møt hjelperne – lenke til ansatte-delen av Om oss-siden -->
     <section class="seksjon seksjon--lys" aria-labelledby="ansatte-tittel">
       <div class="innhold">
         <div class="ansatte-boks">
@@ -245,7 +245,7 @@
             <h2 id="ansatte-tittel">Møt hjelperne</h2>
             <p>Bli kjent med menneskene som kommer hjem til deg. Se bilde og navn på alle som jobber hos oss.</p>
           </div>
-          <a class="knapp knapp--primar knapp--stor" href="ansatte.html">Se de ansatte</a>
+          <a class="knapp knapp--primar knapp--stor" href="om-oss.html#ansatte">Se de ansatte</a>
         </div>
       </div>
     </section>
@@ -304,7 +304,7 @@
   </main>
 
   <!-- Bunntekst -->
-  <footer class="bunn">
+  <footer class="bunn" id="kontakt">
     <div class="innhold">
       <div class="bunn-rutenett">
         <div>
@@ -313,28 +313,30 @@
             <span>Hjelperne</span>
           </a>
           <p>Hjelp når du trenger det. En ungdomsbedrift som gir praktisk hjelp i hjemmet til folk i nærmiljøet.</p>
+          <p>Betaling med Vipps eller faktura.</p>
         </div>
 
         <div>
-          <h3>Kontakt</h3>
+          <h3>Kontakt oss</h3>
           <ul>
             <li><a class="telefon-stor" href="tel:+4748382120">+47 483 82 120</a></li>
             <li class="bunn-tid">Telefontid: hverdager 16:00–20:00<br>helger 10:00–16:00</li>
             <li><a class="bunn-epost" href="mailto:hjelperneb@gmail.com">hjelperneb@gmail.com</a></li>
-            <li><a href="kontakt.html">Send oss en melding</a></li>
-            <li><a href="bestill.html">Bestill hjelp</a></li>
+            <li><a href="sms:+4748382120">Send oss en SMS</a></li>
+            <li><a href="bestill.html">Bestill hjelp på nett</a></li>
           </ul>
         </div>
 
         <div>
           <h3>Sider</h3>
           <ul>
-            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="index.html#tjenester">Tjenester</a></li>
             <li><a href="priser.html">Priser</a></li>
             <li><a href="om-oss.html">Om oss</a></li>
-            <li><a href="ansatte.html">Ansatte</a></li>
+            <li><a href="om-oss.html#ansatte">Ansatte</a></li>
             <li><a href="tilbakemeldinger.html">Tilbakemeldinger</a></li>
-            <li><a href="kontakt.html">Kontakt oss</a></li>
+            <li><a href="bestill.html">Bestill hjelp</a></li>
           </ul>
         </div>
       </div>
@@ -351,23 +353,6 @@
     Ring 483 82 120
   </a>
 
-  <script>
-    // Mobilmeny – åpne/lukk
-    (function () {
-      var knapp = document.querySelector('.meny-knapp');
-      var meny = document.getElementById('hovedmeny');
-      if (!knapp || !meny) return;
-
-      knapp.addEventListener('click', function () {
-        var apen = meny.classList.toggle('er-apen');
-        knapp.setAttribute('aria-expanded', apen ? 'true' : 'false');
-        knapp.lastChild.textContent = apen ? ' Lukk' : ' Meny';
-      });
-    })();
-
-    // Oppdater årstall i bunnteksten automatisk
-    var aar = document.getElementById('aar');
-    if (aar) aar.textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

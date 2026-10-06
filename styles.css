@@ -107,6 +107,10 @@ p {
   background: var(--gronn-lys);
 }
 
+.seksjon--uten-topp {
+  padding-top: 0;
+}
+
 .seksjon--gronn {
   background: var(--gronn);
   color: var(--hvit);
@@ -371,7 +375,8 @@ p {
   background: var(--gronn);
 }
 
-.meny .knapp:hover {
+.meny .knapp:hover,
+.meny .knapp[aria-current="page"] {
   transform: none;
   background: var(--gronn-mork);
 }
@@ -1012,5 +1017,485 @@ p {
     grid-template-columns: 1fr;
     text-align: center;
     justify-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Ankerlenker – plass til den faste menyen øverst
+   -------------------------------------------------------------------------- */
+[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Undersider – toppfelt
+   -------------------------------------------------------------------------- */
+.side-topp {
+  background: linear-gradient(180deg, var(--hvit) 0%, var(--gronn-lys) 100%);
+  padding: 3.5rem 0 3.25rem;
+  text-align: center;
+}
+
+.side-topp .ingress {
+  font-size: 1.25rem;
+  color: var(--tekst-dempet);
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.side-topp .hero-handlinger {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.side-topp-ikon {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--gronn);
+  color: var(--hvit);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+}
+
+.side-topp-ikon svg {
+  width: 44px;
+  height: 44px;
+}
+
+@media (max-width: 600px) {
+  .side-topp .hero-handlinger .knapp {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Infoboks
+   -------------------------------------------------------------------------- */
+.infoboks {
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 6px solid var(--gronn);
+  background: var(--gronn-lys);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 1.1rem;
+}
+
+.infoboks p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Priser
+   -------------------------------------------------------------------------- */
+.pris-kort {
+  display: flex;
+  flex-direction: column;
+}
+
+.pris-kort .pris {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--kant);
+  color: var(--gronn);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.pris-kort .pris-beskrivelse {
+  margin-bottom: 1.25rem;
+}
+
+.pris-kort .pris small {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--tekst-dempet);
+}
+
+/* --------------------------------------------------------------------------
+   Om oss
+   -------------------------------------------------------------------------- */
+.to-kolonner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.to-kolonner .tekst p {
+  font-size: 1.15rem;
+}
+
+.to-kolonner .bilde img {
+  width: min(100%, 360px);
+  margin-inline: auto;
+  border-radius: 50%;
+  box-shadow: var(--skygge);
+}
+
+@media (max-width: 900px) {
+  .to-kolonner {
+    grid-template-columns: 1fr;
+  }
+
+  .to-kolonner .bilde {
+    order: -1;
+  }
+
+  .to-kolonner .bilde img {
+    width: min(70%, 280px);
+  }
+}
+
+.ansatte-rutenett {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.ansatt {
+  background: var(--hvit);
+  border: 2px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  text-align: center;
+}
+
+.ansatt-bilde {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  background: var(--gronn-lys);
+  color: var(--gronn);
+  border: 4px solid var(--gronn);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.ansatt-bilde img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ansatt-bilde svg {
+  width: 84px;
+  height: 84px;
+}
+
+.ansatt h3 {
+  margin-bottom: 0.2rem;
+}
+
+.ansatt-alder {
+  font-weight: 700;
+  color: var(--gronn);
+  margin-bottom: 0.75rem;
+}
+
+.ansatt p:last-child {
+  color: var(--tekst-dempet);
+  margin: 0;
+}
+
+.fakta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.fakta div {
+  background: var(--hvit);
+  border: 2px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fakta dt {
+  font-weight: 700;
+  color: var(--tekst-dempet);
+}
+
+.fakta dd {
+  margin: 0.3rem 0 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--gronn);
+}
+
+/* --------------------------------------------------------------------------
+   Kontaktvalg (skjema / ring / SMS / e-post)
+   -------------------------------------------------------------------------- */
+.kontaktvalg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.valg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  background: var(--hvit);
+  border: 2px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.25rem;
+  color: var(--tekst);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.valg:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--skygge);
+  border-color: var(--gronn);
+}
+
+.valg .kort-ikon {
+  margin-bottom: 0.5rem;
+}
+
+.valg-tittel {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gronn);
+}
+
+.valg-tekst {
+  color: var(--tekst-dempet);
+}
+
+.valg-handling {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-weight: 700;
+  color: var(--gronn);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Skjema
+   -------------------------------------------------------------------------- */
+.skjema-oppsett {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.skjema {
+  background: var(--hvit);
+  border: 2px solid var(--kant);
+  border-radius: var(--radius);
+  padding: 2.25rem 2rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.skjema h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.5rem, 6vw, 2.4rem);
+  overflow-wrap: break-word;
+}
+
+.felt {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.felt-par {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.skjema label,
+.skjema legend {
+  font-weight: 700;
+  color: var(--gronn);
+  font-size: 1.05rem;
+  padding: 0;
+}
+
+.valgfritt {
+  font-weight: 400;
+  color: var(--tekst-dempet);
+  font-size: 0.95rem;
+}
+
+.skjema input[type="text"],
+.skjema input[type="tel"],
+.skjema input[type="email"],
+.skjema select,
+.skjema textarea {
+  width: 100%;
+  min-height: 3.2rem;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--tekst);
+  background: var(--hvit);
+  border: 2px solid #9fb5a8;
+  border-radius: 10px;
+}
+
+.skjema textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.skjema input:focus-visible,
+.skjema select:focus-visible,
+.skjema textarea:focus-visible {
+  outline: 4px solid #f5b400;
+  outline-offset: 2px;
+  border-color: var(--gronn);
+}
+
+.skjema fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.radio-valg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skjema .radio-valg label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid var(--kant);
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--tekst);
+  cursor: pointer;
+}
+
+.skjema .radio-valg label:has(input:checked) {
+  border-color: var(--gronn);
+  background: var(--gronn-lys);
+}
+
+.radio-valg input,
+.avkrysning input {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  flex: none;
+  accent-color: var(--gronn);
+}
+
+.skjema .avkrysning {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-weight: 400;
+  color: var(--tekst);
+  cursor: pointer;
+}
+
+.avkrysning input {
+  margin-top: 0.2rem;
+}
+
+.skjema-hjelp {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--tekst-dempet);
+}
+
+.skjema .knapp {
+  justify-self: start;
+}
+
+.honning {
+  position: absolute;
+  left: -9999px;
+}
+
+.side-info {
+  position: sticky;
+  top: 7rem;
+  background: var(--gronn);
+  color: var(--hvit);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+}
+
+.side-info h2,
+.side-info h3,
+.side-info a {
+  color: var(--hvit);
+}
+
+.side-info h2 {
+  font-size: 1.5rem;
+}
+
+.side-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.side-info li strong {
+  display: block;
+}
+
+.side-info li span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.side-info .telefon-stor {
+  font-size: 1.5rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.skjema-oppsett > *,
+.felt {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .skjema-oppsett {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .side-info {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .skjema {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .felt-par {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skjema .knapp {
+    width: 100%;
   }
 }
