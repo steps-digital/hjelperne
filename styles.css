@@ -830,6 +830,23 @@ p {
   font-size: 0.95rem;
 }
 
+.tom-boks {
+  grid-column: 1 / -1;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: var(--gronn-lys);
+  border: 3px dashed #9fb5a8;
+  border-radius: var(--radius);
+}
+
+.tom-boks p {
+  font-size: 1.1rem;
+  color: var(--tekst-dempet);
+  margin-bottom: 1.5rem;
+}
+
 .senter {
   text-align: center;
   margin-top: 2.5rem;
