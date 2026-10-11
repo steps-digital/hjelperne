@@ -765,6 +765,18 @@ p {
   box-shadow: var(--skygge);
 }
 
+.arbeid-bilde {
+  margin: 0;
+}
+
+.arbeid-bilde figcaption {
+  margin-top: 0.85rem;
+  text-align: center;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--tekst-dempet);
+}
+
 .arbeid-tekst p {
   font-size: 1.15rem;
   color: var(--tekst-dempet);
