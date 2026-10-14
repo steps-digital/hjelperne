@@ -1272,6 +1272,12 @@ p {
   color: var(--tekst-dempet);
 }
 
+.navnekort .navnekort-rolle {
+  margin-bottom: 0.2rem;
+  color: var(--gronn);
+  font-weight: 700;
+}
+
 .ansatte-tekst {
   max-width: 44rem;
   margin: 2rem auto 0;
